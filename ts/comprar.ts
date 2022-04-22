@@ -42,9 +42,15 @@ function cargarProductos() {
     let precioProducto = document.createElement("p");
     precioProducto.innerHTML = "$" + precio[i];
 
+    let cantidad = document.createElement("input");
+    cantidad.type = "number";
+    cantidad.max = String(stock[i]);
+    cantidad.min = "0";
+
     divProducto.appendChild(imgs);
     divProducto.appendChild(nombreProducto);
     divProducto.appendChild(precioProducto);
+    divProducto.appendChild(cantidad);
     divElementos.appendChild(divProducto);
   }
 }

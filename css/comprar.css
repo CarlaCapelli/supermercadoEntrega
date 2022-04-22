@@ -100,3 +100,8 @@ p {
   flex-wrap: wrap;
   flex-direction: row;
 }
+input {
+  display: block;
+  margin: auto;
+  background-color: rgb(236, 84, 38);
+}
