@@ -83,6 +83,20 @@ li a:hover {
 p {
   text-align: center;
 }
-#elementos{
-  white
+
+.blanco {
+  display: flex;
+  margin: 20px;
+  width: 200px;
+  height: 300px;
+  flex-direction: column;
+  color: rgb(236, 84, 38);
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgb(236, 84, 38);
+}
+#elementos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
