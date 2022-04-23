@@ -78,6 +78,8 @@ let cargarProductos = () => {
 
 function comprarProductos(): void {
   let sumaTotal: number = 0;
+  let descuento: number = 0;
+  let totalDescuento: number = 0;
   for (let i: number = 0; i < botones.length; i++) {
     botones[i].addEventListener("click", function () {
       let suma: number = 0;
@@ -108,6 +110,10 @@ function comprarProductos(): void {
           " Precio total: $" +
           suma;
         sumaTotal = sumaTotal + precio[i] * cantidadSeleccionada;
+        descuento = sumaTotal * 0.15;
+        totalDescuento = sumaTotal - descuento;
+        console.log(descuento);
+        console.log(totalDescuento);
         //console.log(sumaTotal);
         let divSumaTotal = document.getElementById("sumaTotal");
         divSumaTotal?.innerHTML = "El precio total es de: $" + sumaTotal;
