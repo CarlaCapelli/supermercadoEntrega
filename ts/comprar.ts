@@ -77,9 +77,10 @@ let cargarProductos = () => {
 };
 
 function comprarProductos(): void {
+  let sumaTotal: number = 0;
   for (let i: number = 0; i < botones.length; i++) {
-    let suma: number = 0;
     botones[i].addEventListener("click", function () {
+      let suma: number = 0;
       let cantidad = document.getElementById("cantidad" + [i]);
       let cantidadSeleccionada = Number(cantidad.value);
 
@@ -98,13 +99,18 @@ function comprarProductos(): void {
 
         let productoCompra = document.createElement("p");
         productoCompra.innerHTML =
+          "Producto: " +
           lista[i] +
-          " precio unitario:" +
+          " Precio unitario: $" +
           precio[i] +
-          " cantidad: " +
+          " Cantidad: " +
           cantidadSeleccionada +
-          " ,precio total" +
+          " Precio total: $" +
           suma;
+        sumaTotal = sumaTotal + precio[i] * cantidadSeleccionada;
+        //console.log(sumaTotal);
+        let divSumaTotal = document.getElementById("sumaTotal");
+        divSumaTotal?.innerHTML = "El precio total es de: $" + sumaTotal;
         divCompra.appendChild(productoCompra);
       }
     });

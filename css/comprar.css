@@ -111,6 +111,20 @@ button {
   margin: auto;
 }
 .naranja {
+  color: black;
+  background-color: rgb(236, 84, 38);
+  margin: 50px;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+}
+
+.pago {
   color: orange;
-  background-color: white;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.ipt {
+  margin: 2px;
+  border: 1px solid orange;
 }
