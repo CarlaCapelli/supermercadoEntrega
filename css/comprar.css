@@ -88,8 +88,9 @@ p {
   display: flex;
   margin: 20px;
   width: 200px;
-  height: 300px;
+  height: 310px;
   flex-direction: column;
+
   color: rgb(236, 84, 38);
   background-color: white;
   box-shadow: 0px 8px 16px 0px rgb(236, 84, 38);
@@ -103,5 +104,13 @@ p {
 input {
   display: block;
   margin: auto;
-  background-color: rgb(236, 84, 38);
+  background-color: white;
+}
+button {
+  display: block;
+  margin: auto;
+}
+.naranja {
+  color: orange;
+  background-color: white;
 }
