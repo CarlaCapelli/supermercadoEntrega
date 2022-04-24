@@ -12,7 +12,7 @@ body {
   background-color: black;
 }
 
-h3 {
+#titulo {
   font-family: "Amatic SC", cursive;
   text-align: center;
   background-color: black;
@@ -120,11 +120,15 @@ button {
 
 .pago {
   color: orange;
-  display: flex;
+  display: none;
   margin: auto;
   justify-content: center;
 }
 .ipt {
   margin: 2px;
   border: 1px solid orange;
+}
+
+.desaparece {
+  display: none;
 }

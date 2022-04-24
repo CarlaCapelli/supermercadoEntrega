@@ -27,7 +27,7 @@
   </head>
   <body>
     <div class="header">
-      <img src="../logoc.jpg" alt="logo" />
+      <img src="../logoc.jpeg" alt="logo" />
       <div class="bar">
         <ul class="barra">
           <li><a href="index.html">Home</a></li>
@@ -36,11 +36,12 @@
         </ul>
       </div>
 
-      <h3>Productos</h3>
+      <h3 id="titulo">Productos</h3>
     </div>
     <div id="elementos"></div>
     <div id="compra">
       <p id="sumaTotal"></p>
+      <p id="sumaTotalDescuento"></p>
     </div>
     <div class="pago">
       <p class="ipt">
@@ -53,6 +54,7 @@
         <input type="radio" name="pago" value="nativa" /> tarjeta nativa
       </p>
     </div>
+    <button id="comprar" class="desaparece">Terminar compra</button>
     <script src="./ts/comprar.ts"></script>
   </body>
 </html>
