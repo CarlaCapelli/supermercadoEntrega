@@ -95,7 +95,7 @@ li a:hover {
   text-align: left;
   padding: 2px;
   color: rgb(236, 84, 38);
-  margin: 0 30%;
+  margin: 20px 30%;
 }
 .foot {
   color: white;
@@ -128,4 +128,21 @@ li a:hover {
 
 li {
   list-style-type: none;
+}
+
+label {
+  display: block;
+}
+#enviar {
+  display: block;
+  margin: 10px auto;
+}
+#formulario {
+  border: 1px solid black;
+  margin: auto;
+  padding: auto;
+  width: 300px;
+}
+#form {
+  margin: auto;
 }

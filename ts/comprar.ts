@@ -65,6 +65,7 @@ let cargarProductos = () => {
       let btnPagar = document.getElementById("pagar");
       btnPagar?.classList.remove("desaparece");
     });
+
     divElementos.appendChild(divProducto);
     divProducto.appendChild(imgs);
     divProducto.appendChild(nombreProducto);
@@ -91,10 +92,10 @@ let comprarProductos = () => {
       } else {
         suma = suma + precio[i] * cantidadSeleccionada;
         console.log(
-          "agrego " + cantidadSeleccionada + " unidad/es de " + lista[i],
+          "Agrego " + cantidadSeleccionada + " unidad/es de " + lista[i],
           "el precio unitario es $" + precio[i]
         );
-        console.log(" la suma total de " + lista[i] + " es de $" + suma);
+        console.log("La suma total de " + lista[i] + " es de $" + suma);
         let divCompra = document.getElementById("compra");
 
         divCompra.classList.add("naranja");
@@ -120,7 +121,6 @@ let comprarProductos = () => {
         divSumaTotalDesc?.innerHTML =
           "El precio total con descuento es de: $" + totalDescuento;
         divCompra.appendChild(productoCompra);
-        console.log(sumaTotal);
 
         if (sumaTotal > 0) {
           let btnComprar = document.getElementById("comprar");
@@ -133,6 +133,9 @@ let comprarProductos = () => {
 
   let btnPagar = document.getElementById("pagar");
   btnPagar.addEventListener("click", () => {
+    console.log("El total de su compra es :$" + sumaTotal);
+    console.log("El total de su compracon descuento es :$" + totalDescuento);
+    console.log("Gracias por su compra");
     let gracias = document.getElementById("gracias");
     gracias?.classList.remove("desaparece");
     gracias?.classList.add("gracias");
