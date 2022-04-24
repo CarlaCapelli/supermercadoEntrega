@@ -14,9 +14,10 @@ let enviarConsulta = () => {
     console.log("Su correo es : " + cor);
     console.log("Su consulta es : " + con);
     alert("Gracias " + nom + " por su consulta");
-    console.log("Gracias " + nom + "por su consulta");
+    console.log("Gracias " + nom + " por su consulta");
+    let resete = document.getElementById("form");
+    resete.reset();
   });
 };
 
 window.onload = enviarConsulta();
-/*enviarConsulta();*/
