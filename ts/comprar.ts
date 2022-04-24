@@ -17,20 +17,6 @@ let harina = document.createElement("img");
 harina.src = "harina.jpeg";
 harina?.classList.add("fotoProd");
 let fotos: any[] = [mayonesa, cafe, alfajor, harina, yerba, coca];
-let boton1 = document.createElement("button");
-boton1.innerText = "Agregar";
-let boton2 = document.createElement("button");
-boton2.innerText = "Agregar";
-let boton3 = document.createElement("button");
-boton3.innerText = "Agregar";
-let boton4 = document.createElement("button");
-boton4.innerText = "Agregar";
-let boton5 = document.createElement("button");
-boton5.innerText = "Agregar";
-let boton6 = document.createElement("button");
-boton6.innerText = "Agregar";
-
-let botones: any[] = [boton1, boton2, boton3, boton4, boton5, boton6];
 
 let lista: string[] = [
   "Mayonesa",
@@ -61,9 +47,10 @@ let cargarProductos = () => {
     cantidad.type = "number";
     cantidad.max = String(stock[i]);
     cantidad.min = "0";
-    let btns = document.createElement("button");
 
-    btns = botones[i];
+    let btn = document.createElement("button");
+    btn.innerText = "Agregar";
+    btn.id = "boton" + [i];
     let btnComprar = document.getElementById("comprar");
     btnComprar?.addEventListener("click", function () {
       divElementos.classList.toggle("desaparece");
@@ -71,10 +58,12 @@ let cargarProductos = () => {
       nombreProducto.classList.toggle("desaparece");
       digaCantidad.classList.toggle("desaparece");
       cantidad.classList.toggle("desaparece");
-      btns.classList.toggle("desaparece");
+      btn.classList.toggle("desaparece");
       let titu = document.getElementById("titulo");
       titu?.classList.add("desaparece");
       btnComprar.classList.add("desaparece");
+      let btnPagar = document.getElementById("pagar");
+      btnPagar?.classList.remove("desaparece");
     });
     divElementos.appendChild(divProducto);
     divProducto.appendChild(imgs);
@@ -82,16 +71,17 @@ let cargarProductos = () => {
     divProducto.appendChild(precioProducto);
     divProducto.appendChild(digaCantidad);
     divProducto.appendChild(cantidad);
-    divProducto.appendChild(btns);
+    divProducto.appendChild(btn);
   }
 };
 
-function comprarProductos(): void {
+let comprarProductos = () => {
   let sumaTotal: number = 0;
   let descuento: number = 0;
   let totalDescuento: number = 0;
-  for (let i: number = 0; i < botones.length; i++) {
-    botones[i].addEventListener("click", function () {
+  for (let i: number = 0; i < lista.length; i++) {
+    let bot = document.getElementById("boton" + [i]);
+    bot.addEventListener("click", () => {
       let suma: number = 0;
       let cantidad = document.getElementById("cantidad" + [i]);
       let cantidadSeleccionada = Number(cantidad.value);
@@ -131,6 +121,7 @@ function comprarProductos(): void {
           "El precio total con descuento es de: $" + totalDescuento;
         divCompra.appendChild(productoCompra);
         console.log(sumaTotal);
+
         if (sumaTotal > 0) {
           let btnComprar = document.getElementById("comprar");
 
@@ -139,7 +130,21 @@ function comprarProductos(): void {
       }
     });
   }
-}
+
+  let btnPagar = document.getElementById("pagar");
+  btnPagar.addEventListener("click", () => {
+    let gracias = document.getElementById("gracias");
+    gracias?.classList.remove("desaparece");
+    gracias?.classList.add("gracias");
+    let divSumaTotal = document.getElementById("sumaTotal");
+    let divSumaTotalDesc = document.getElementById("sumaTotalDescuento");
+    divSumaTotal.classList.add("desaparece");
+    divSumaTotalDesc.classList.add("desaparece");
+    let divCompra = document.getElementById("compra");
+    divCompra.classList.add("desaparece");
+    btnPagar?.classList.add("desaparece");
+  });
+};
 
 window.onload = cargarProductos();
 window.onload = comprarProductos();
