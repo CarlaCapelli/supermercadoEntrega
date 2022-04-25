@@ -23,39 +23,36 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Condiment&family=Explora&family=Grape+Nuts&family=Inspiration&family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/comprar.css" />
   </head>
   <body>
     <div class="header">
-      <h1>Bienvenidos</h1>
+      <img src="../logoc.jpeg" alt="logo" />
+      <div class="bar">
+        <ul class="barra">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="comprar.html">Comprar</a></li>
+          <li><a class="active" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
 
-      <img src="logoc.jpeg" alt="logo super" />
-
-      <h2>Todo lo que necesitas!</h2>
-    </div>
-
-    <div class="bar">
-      <ul class="barra">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="comprar.html">Comprar</a></li>
-        <li><a class="active" href="contacto.html">Contacto</a></li>
-      </ul>
+      <h3 id="titulo">Contacto</h3>
     </div>
     <div id="formulario" class="content">
       <form id="form">
         <ul>
           <li>
             <label for="name">Nombre:</label>
-            <input type="text" id="name" value="nombre" />
+            <input type="text" id="name" />
           </li>
 
           <li>
             <label for="mail">Correo :</label>
-            <input type="email" id="mail" name="user_mail" value="correo" />
+            <input type="email" id="mail" name="user_mail" />
           </li>
           <li>
             <label for="msg">Consulta:</label>
-            <textarea id="msg" value="consulta"></textarea>
+            <textarea id="msg"></textarea>
           </li>
           <li>
             <input id="enviar" type="button" value="Enviar" />

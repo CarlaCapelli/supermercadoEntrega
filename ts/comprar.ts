@@ -105,11 +105,11 @@ let comprarProductos = () => {
         productoCompra.innerHTML =
           "Producto: " +
           lista[i] +
-          " Precio unitario: $" +
+          " Precio/u: $" +
           precio[i] +
-          " Cantidad: " +
+          " x " +
           cantidadSeleccionada +
-          " Precio total: $" +
+          " = $" +
           suma;
         sumaTotal = sumaTotal + precio[i] * cantidadSeleccionada;
         descuento = sumaTotal * 0.15;

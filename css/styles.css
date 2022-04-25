@@ -125,24 +125,3 @@ li a:hover {
 .descuento {
   text-align: center;
 }
-
-li {
-  list-style-type: none;
-}
-
-label {
-  display: block;
-}
-#enviar {
-  display: block;
-  margin: 10px auto;
-}
-#formulario {
-  border: 1px solid black;
-  margin: auto;
-  padding: auto;
-  width: 300px;
-}
-#form {
-  margin: auto;
-}

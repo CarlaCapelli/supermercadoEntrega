@@ -111,10 +111,10 @@ button {
   margin: auto;
 }
 .naranja {
-  color: black;
-  background-color: rgb(236, 84, 38);
+  color: rgb(236, 84, 38);
+  background-color: white;
   margin: 50px;
-  font-family: "Amatic SC", cursive;
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
 
@@ -123,10 +123,6 @@ button {
   display: none;
   margin: auto;
   justify-content: center;
-}
-.ipt {
-  margin: 2px;
-  border: 1px solid orange;
 }
 
 .desaparece {
@@ -140,4 +136,64 @@ button {
   font-family: "Amatic SC", cursive;
   font-weight: bold;
   font-size: 50px;
+}
+li {
+  list-style-type: none;
+}
+
+label {
+  display: block;
+}
+#enviar {
+  display: block;
+  margin: 10px auto;
+}
+#formulario {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin: auto;
+  padding: auto;
+  width: 300px;
+  background-color: rgb(236, 84, 38);
+  color: white;
+}
+#form {
+  margin: auto;
+  padding: 20px;
+}
+.footer {
+  background-color: white;
+  text-align: left;
+  padding: 2px;
+  color: rgb(236, 84, 38);
+  margin: 20px 30%;
+}
+.foot {
+  color: white;
+  background-color: rgb(236, 84, 38);
+  text-align: center;
+}
+
+.f {
+  background-color: white;
+  float: none;
+}
+.lunes {
+  font-style: normal;
+  font-weight: solid;
+  color: blanchedalmond;
+}
+
+.negrita {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: solid;
+}
+.negritaCeleste {
+  color: rgb(66, 106, 180);
+}
+.descuento {
+  text-align: center;
+  background-color: rgb(236, 84, 38);
 }
