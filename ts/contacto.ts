@@ -20,4 +20,4 @@ let enviarConsulta = () => {
   });
 };
 
-window.onload = enviarConsulta();
+enviarConsulta();

@@ -52,7 +52,11 @@ let cargarProductos = () => {
     btn.innerText = "Agregar";
     btn.id = "boton" + [i];
     let btnComprar = document.getElementById("comprar");
+    //Lo puse aca para no tener que volver a llamar todos los elementos abajo
+
     btnComprar?.addEventListener("click", function () {
+      //No se como hacer para que no se vean todas las cosas de una
+      //si le pongo solo a divElementos la clase las cosas se ven igual
       divElementos.classList.toggle("desaparece");
       divProducto.classList.toggle("desaparece");
       nombreProducto.classList.toggle("desaparece");
@@ -149,5 +153,5 @@ let comprarProductos = () => {
   });
 };
 
-window.onload = cargarProductos();
-window.onload = comprarProductos();
+cargarProductos();
+comprarProductos();
