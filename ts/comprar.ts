@@ -52,7 +52,7 @@ let cargarProductos = () => {
     btn.innerText = "Agregar";
     btn.id = "boton" + [i];
     let btnComprar = document.getElementById("comprar");
-    //Lo puse aca para no tener que volver a llamar todos los elementos abajo
+    // Lo puse aca para no tener que volver a llamar todos los elementos abajo
 
     btnComprar?.addEventListener("click", function () {
       //No se como hacer para que no se vean todas las cosas de una
