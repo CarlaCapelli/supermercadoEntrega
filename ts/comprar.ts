@@ -1,20 +1,20 @@
 let alfajor = document.createElement("img");
-alfajor.src = "./alfajor.jpeg";
+alfajor.src = "./alfajor.jpg";
 alfajor?.classList.add("fotoProd");
 let yerba = document.createElement("img");
-yerba.src = "yerba.jpeg";
+yerba.src = "yerba.jpg";
 yerba?.classList.add("fotoProd");
 let mayonesa = document.createElement("img");
-mayonesa.src = "mayonesa.jpeg";
+mayonesa.src = "mayonesa.jpg";
 mayonesa?.classList.add("fotoProd");
 let cafe = document.createElement("img");
-cafe.src = "cafe.jpeg";
+cafe.src = "cafe.jpg";
 cafe?.classList.add("fotoProd");
 let coca = document.createElement("img");
-coca.src = "coca.jpeg";
+coca.src = "coca.jpg";
 coca?.classList.add("fotoProd");
 let harina = document.createElement("img");
-harina.src = "harina.jpeg";
+harina.src = "harina.jpg";
 harina?.classList.add("fotoProd");
 let fotos: any[] = [mayonesa, cafe, alfajor, harina, yerba, coca];
 
