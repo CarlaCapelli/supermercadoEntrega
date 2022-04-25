@@ -118,13 +118,6 @@ button {
   font-weight: bold;
 }
 
-.pago {
-  color: orange;
-  display: none;
-  margin: auto;
-  justify-content: center;
-}
-
 .desaparece {
   display: none;
 }
