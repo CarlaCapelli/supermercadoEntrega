@@ -49,6 +49,7 @@ let cargarProductos = () => {
     cantidad.min = "0";
 
     let btn = document.createElement("button");
+    btn.classList.add("botonAgregar");
     btn.innerText = "Agregar";
     btn.id = "boton" + [i];
 
@@ -106,6 +107,7 @@ let comprarProductos = () => {
         divSumaTotal?.innerHTML = "El precio total es de: $" + sumaTotal;
         divSumaTotalDesc?.innerHTML =
           "El precio total con descuento es de: $" + totalDescuento;
+
         divCompra.appendChild(productoCompra);
 
         if (sumaTotal > 0) {

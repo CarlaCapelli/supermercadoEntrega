@@ -34,15 +34,14 @@ img {
   flex-direction: column;
 }
 .bar {
+  border-radius: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  border-radius: 20px;
-  margin: 10px 0px;
+  margin: 5px 0px;
+  font-size: 20px;
   background-color: white;
   padding: 0px;
   overflow: hidden;
-
-  font-size: 20px;
 }
 .barra {
   display: flex;
@@ -52,7 +51,7 @@ img {
   border: none;
   cursor: pointer;
   list-style-type: none;
-  height: 16px;
+
   justify-content: space-around;
 }
 li a {
@@ -119,8 +118,9 @@ button {
 }
 .naranja {
   color: rgb(236, 84, 38);
-  background-color: white;
+  border: 1px solid rgb(236, 84, 38);
   margin: 50px;
+  font-size: 25px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
@@ -201,5 +201,34 @@ label {
 .material-symbols-outlined {
   margin: 0px;
   padding: 0px;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.botonAgregar {
+  background-color: rgb(236, 84, 38);
+  color: white;
+  font-size: 18px;
+  border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-radius: 20px;
+}
+#comprar {
+  margin: 20px auto;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(236, 84, 38);
+  font-size: 20px;
+}
+
+#pagar {
+  background-color: rgb(236, 84, 38);
+  color: black;
+  font-size: 30px;
+  border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  font-weight: bold;
 }
