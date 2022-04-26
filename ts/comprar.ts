@@ -84,7 +84,7 @@ let comprarProductos = () => {
         console.log("La suma total de " + lista[i] + " es de $" + suma);
         let divCompra = document.getElementById("compra");
 
-        divCompra.classList.add("naranja");
+        //divCompra.classList.add("naranja");
 
         let productoCompra = document.createElement("p");
 
@@ -122,9 +122,11 @@ let comprarProductos = () => {
   // Lo puse aca para no tener que volver a llamar todos los elementos abajo
 
   btnComprar?.addEventListener("click", function () {
-    //No se como hacer para que no se vean todas las cosas de una
-    //si le pongo solo a divElementos la clase las cosas se ven igual
     divElementos.innerHTML = null;
+    let divCompra = document.getElementById("compra");
+    divCompra.classList.remove("desaparece");
+    let titu = document.getElementById("titulo");
+    titu?.classList.add("desaparece");
     btnComprar.classList.add("desaparece");
     let btnPagar = document.getElementById("pagar");
     btnPagar?.classList.remove("desaparece");
