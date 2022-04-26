@@ -51,24 +51,6 @@ let cargarProductos = () => {
     let btn = document.createElement("button");
     btn.innerText = "Agregar";
     btn.id = "boton" + [i];
-    let btnComprar = document.getElementById("comprar");
-    // Lo puse aca para no tener que volver a llamar todos los elementos abajo
-
-    btnComprar?.addEventListener("click", function () {
-      //No se como hacer para que no se vean todas las cosas de una
-      //si le pongo solo a divElementos la clase las cosas se ven igual
-      divElementos.classList.toggle("desaparece");
-      divProducto.classList.toggle("desaparece");
-      nombreProducto.classList.toggle("desaparece");
-      digaCantidad.classList.toggle("desaparece");
-      cantidad.classList.toggle("desaparece");
-      btn.classList.toggle("desaparece");
-      let titu = document.getElementById("titulo");
-      titu?.classList.add("desaparece");
-      btnComprar.classList.add("desaparece");
-      let btnPagar = document.getElementById("pagar");
-      btnPagar?.classList.remove("desaparece");
-    });
 
     divElementos.appendChild(divProducto);
     divProducto.appendChild(imgs);
@@ -136,6 +118,17 @@ let comprarProductos = () => {
   }
 
   let btnPagar = document.getElementById("pagar");
+  let btnComprar = document.getElementById("comprar");
+  // Lo puse aca para no tener que volver a llamar todos los elementos abajo
+
+  btnComprar?.addEventListener("click", function () {
+    //No se como hacer para que no se vean todas las cosas de una
+    //si le pongo solo a divElementos la clase las cosas se ven igual
+    divElementos.innerHTML = null;
+    btnComprar.classList.add("desaparece");
+    let btnPagar = document.getElementById("pagar");
+    btnPagar?.classList.remove("desaparece");
+  });
   btnPagar.addEventListener("click", () => {
     console.log("El total de su compra es :$" + sumaTotal);
     console.log("El total de su compracon descuento es :$" + totalDescuento);

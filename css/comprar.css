@@ -162,10 +162,10 @@ label {
 }
 .footer {
   background-color: white;
-  text-align: left;
+  text-align: center;
   padding: 2px;
   color: rgb(236, 84, 38);
-  margin: 20px 30%;
+  margin: 20px 5px;
 }
 .foot {
   color: white;
