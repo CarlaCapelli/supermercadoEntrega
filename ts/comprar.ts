@@ -46,7 +46,7 @@ let cargarProductos = () => {
     cantidad.id = "cantidad" + [i];
     cantidad.type = "number";
     cantidad.max = String(stock[i]);
-    cantidad.min = "0";
+    cantidad.min = "1";
 
     let btn = document.createElement("button");
     btn.classList.add("botonAgregar");
@@ -74,7 +74,7 @@ let comprarProductos = () => {
       let cantidad = document.getElementById("cantidad" + [i]);
       let cantidadSeleccionada = Number(cantidad.value);
 
-      if (cantidadSeleccionada < 0 || cantidadSeleccionada > stock[i]) {
+      if (cantidadSeleccionada < 1 || cantidadSeleccionada > stock[i]) {
         alert("no contamos con la cantidad seleccionada");
       } else {
         suma = suma + precio[i] * cantidadSeleccionada;
@@ -84,8 +84,6 @@ let comprarProductos = () => {
         );
         console.log("La suma total de " + lista[i] + " es de $" + suma);
         let divCompra = document.getElementById("compra");
-
-        //divCompra.classList.add("naranja");
 
         let productoCompra = document.createElement("p");
 
