@@ -38,7 +38,7 @@ img {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   margin: 5px 0px;
-  font-size: 16px;
+  font-size: 17px;
   background-color: white;
   padding: 0px;
   overflow: hidden;
@@ -226,8 +226,8 @@ label {
 #pagar {
   background-color: rgb(236, 84, 38);
   color: black;
-  font-size: 30px;
-  border: none;
+  font-size: 20px;
+  border: 3px outset rgb(236, 84, 38);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 
